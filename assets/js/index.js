@@ -1,3 +1,19 @@
+//3D Rotation
+const card = document.getElementById("myCard1");
+
+card.addEventListener("click", () => {
+  const isFlipped = card.style.transform === "rotateY(0.5turn)";
+  card.style.transform = isFlipped ? "rotateY(0)" : "rotateY(0.5turn)";
+});
+
+const card2 = document.getElementById("myCard2");
+
+card2.addEventListener("click", () => {
+  const isFlipped = card2.style.transform === "rotateY(0.5turn)";
+  card2.style.transform = isFlipped ? "rotateY(0)" : "rotateY(0.5turn)";
+});
+
+
 
 let prevScrollPos = window.pageYOffset;
 const navbar = document.getElementById("navbar");
@@ -27,24 +43,26 @@ menuButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
     mobileMenu.classList.add('translate-x-full');
 });
-document.addEventListener('DOMContentLoaded', function () {
-    // Card 1
-    const btn1 = document.getElementById('show-content-btn');
-    const content1 = document.getElementById('card-content');
-    if (btn1 && content1) {
-        btn1.addEventListener('click', function () {
-            content1.classList.toggle('hidden');
-        });
-    }
-    // Card 2
-    const btn2 = document.getElementById('show-content-btn2');
-    const content2 = document.getElementById('card-content2');
-    if (btn2 && content2) {
-        btn2.addEventListener('click', function () {
-            content2.classList.toggle('hidden');
-        });
-    }
-});
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Card 1
+//     const btn1 = document.getElementById('show-content-btn');
+//     const content1 = document.getElementById('card-content');
+//     if (btn1 && content1) {
+//         btn1.addEventListener('click', function () {
+//             content1.classList.toggle('hidden');
+//         });
+//     }
+//     // Card 2
+//     const btn2 = document.getElementById('show-content-btn2');
+//     const content2 = document.getElementById('card-content2');
+//     if (btn2 && content2) {
+//         btn2.addEventListener('click', function () {
+//             content2.classList.toggle('hidden');
+//         });
+//     }
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
     for (let i = 1; i <= 4; i++) {
         const btn = document.getElementById(`more-btn-${i}`);

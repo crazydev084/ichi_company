@@ -1,0 +1,68 @@
+#main-title {
+    line-height: 9.5rem;
+    text-align: center;
+}
+
+#lineheight {
+    line-height: 3rem;
+}
+
+/* 3D Rotation */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Vanilla CSS for flip card */
+.card { perspective: 800px;}
+.card__content {transform-style: preserve-3d;}
+/* .card:hover .card__content {transform: rotateY(.5turn);} */
+
+.card__front,
+.card__back { backface-visibility: hidden;}
+.card__back{ transform: rotateY(.5turn);}
+
+
+
+
+@media screen and (max-width: 1600px) {
+    #main-title {
+        line-height: 8.5rem;
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #main-title {
+        line-height: 5.5rem;
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #main-title {
+        line-height: 4rem;
+        font-size: 50px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #main-title {
+        line-height: 4rem;
+        font-size: 35px;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    #main-title {
+        line-height: 3rem;
+        font-size: 27px;
+    }
+    #lineheight {
+        line-height: 2rem;
+    }
+
+}
