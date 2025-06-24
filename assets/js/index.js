@@ -44,25 +44,6 @@ closeButton.addEventListener('click', () => {
     mobileMenu.classList.add('translate-x-full');
 });
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     // Card 1
-//     const btn1 = document.getElementById('show-content-btn');
-//     const content1 = document.getElementById('card-content');
-//     if (btn1 && content1) {
-//         btn1.addEventListener('click', function () {
-//             content1.classList.toggle('hidden');
-//         });
-//     }
-//     // Card 2
-//     const btn2 = document.getElementById('show-content-btn2');
-//     const content2 = document.getElementById('card-content2');
-//     if (btn2 && content2) {
-//         btn2.addEventListener('click', function () {
-//             content2.classList.toggle('hidden');
-//         });
-//     }
-// });
-
 document.addEventListener('DOMContentLoaded', function () {
     for (let i = 1; i <= 4; i++) {
         const btn = document.getElementById(`more-btn-${i}`);
@@ -79,4 +60,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    new WOW({
+        boxClass: 'wow',
+        animateClass: 'animate__animated',
+        offset: 100,
+        mobile: true,
+        live: true
+    }).init();
 });

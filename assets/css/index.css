@@ -7,12 +7,15 @@
     line-height: 3rem;
 }
 
+* {
+    
+    scroll-behavior: smooth;
+    transition: all 0.3s ease-out;
+}
+
 /* 3D Rotation */
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+
 
 /* Vanilla CSS for flip card */
 .card { perspective: 800px;}
@@ -23,7 +26,11 @@
 .card__back { backface-visibility: hidden;}
 .card__back{ transform: rotateY(.5turn);}
 
-
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
 
 
 @media screen and (max-width: 1600px) {
